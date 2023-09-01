@@ -2,6 +2,7 @@
 
 ![](thumbnail.jpg)
 
+----
 
 ## [00:05](https://youtu.be/3Mw-pMmJ7TA?t=5) Introduction and Workshop Purpose
 
