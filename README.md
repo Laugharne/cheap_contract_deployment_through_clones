@@ -10,10 +10,10 @@
 
 ## Workshop Introduction
 
-- OpenZepin's mission is to protect the open economy and provide tooling for building secure apps.
-- OpenZepin consists of three components: contract security, monitoring with Defender, and an audit team.
+- Open Zeppelin's mission is to protect the open economy and provide tooling for building secure apps.
+- Open Zeppelin consists of three components: contract security, monitoring with Defender, and an audit team.
 - The workshop aims to address the needs of developers working with families of smart contracts.
-- The speaker encourages participants to consider OpenZepin for audits and managing decentralized applications.
+- The speaker encourages participants to consider Open Zeppelin for audits and managing decentralized applications.
 
 # [02:10](https://youtu.be/3Mw-pMmJ7TA?t=130) Understanding Clone Feature
 
@@ -25,7 +25,7 @@ Section Overview: This section highlights some existing smart contract families 
 - Liquidity pairs in Uniswap are smart contracts that facilitate asset exchange between tokens.
 - Argent is a mobile-based smart wallet that integrates with DeFi protocols and offers programmable security mechanisms.
 - Both Uniswap and Argent have seen significant adoption, resulting in numerous smart contracts being deployed on-chain.
-  
+
 # [05:02](https://youtu.be/3Mw-pMmJ7TA?t=302) Cost Considerations for Deploying Smart Contracts
 
 Section Overview: This section discusses the cost implications associated with deploying smart contracts, particularly liquidity pairs in Uniswap. It highlights how high deployment costs can limit further adoption for tokens with low trading volumes.
@@ -37,7 +37,7 @@ Section Overview: This section discusses the cost implications associated with d
 - The high deployment costs may hinder the adoption of Uniswap for tokens with low trading volumes.
 
 Note: The transcript does not provide further sections or timestamps.
-# [t=391s] The Cost of Deploying Smart Contracts
+# [06:31](https://youtu.be/3Mw-pMmJ7TA?t=391) The Cost of Deploying Smart Contracts
 
 Section Overview: This section discusses the high cost associated with deploying smart contracts and introduces the concept of using a clone library to reduce deployment expenses.
 
@@ -60,7 +60,7 @@ Section Overview: This section discusses the high cost associated with deploying
 - Clones do not have constructors and their bytecode includes the logic's address directly, eliminating the need for storage reading during delegation.
 - Clones provide better efficiency than proxies and are less expensive to deploy.
 
-# [t=634s] Understanding Clone Mechanism
+# [10:34](https://youtu.be/3Mw-pMmJ7TA?t=634) Understanding Clone Mechanism
 
 Section Overview: This section provides further details about clone mechanism (EIP1167) and highlights its advantages over proxies in terms of efficiency and deployment costs.
 
@@ -71,7 +71,7 @@ Section Overview: This section provides further details about clone mechanism (E
 - While clones are not as efficient as standalone smart contracts when making direct calls, they are still more efficient than proxies.
 - Clones have lower deployment costs due to their minimal bytecode size.
 
-# [t=725s] Examples and Resources
+# [12:05](https://youtu.be/3Mw-pMmJ7TA?t=725) Examples and Resources
 
 Section Overview: This section provides links to code examples and additional resources for further exploration of the clone mechanism.
 
@@ -81,7 +81,7 @@ Section Overview: This section provides links to code examples and additional re
 - The repository offers resources for all workshops conducted by Open Zone.
 
 Note: Please refer to the provided timestamps in the transcript for accurate navigation through the video.
-# [t=0:12:51s] Naive Factory for Creating ERC20 Tokens
+# [12:51](https://youtu.be/3Mw-pMmJ7TA?t=771) Naive Factory for Creating ERC20 Tokens
 
 Section Overview: In this section, the speaker introduces a naive factory for creating ERC20 tokens. They explain that this factory is capable of creating only one type of token, specifically r620 tokens.
 
@@ -92,7 +92,7 @@ Section Overview: In this section, the speaker introduces a naive factory for cr
 - The creation process involves calling the `initialize` function with the selected parameters.
 - This approach is expensive as it deploys a new smart contract containing the entire logic each time a token is created.
 
-# [t=0:13:10s] OpenZeppelin's Contract Upgradable Package
+# [13:10](https://youtu.be/3Mw-pMmJ7TA?t=790) OpenZeppelin's Contract Upgradable Package
 
 Section Overview: The speaker discusses OpenZeppelin's contract upgradable package and its usage in deploying RC20 tokens.
 
@@ -102,7 +102,7 @@ Section Overview: The speaker discusses OpenZeppelin's contract upgradable packa
 - The contract upgradable package offers a variation of the familiar contract structure where the constructor is replaced with an `initialized` function.
 - This allows for contracts with an initializing mechanism, which can be useful when building contracts used with upgradability scripts and packages like Hardhat.
 
-# [t=0:14:14s] Proxy Factory for Upgradable Tokens
+# [14:14](https://youtu.be/3Mw-pMmJ7TA?t=854) Proxy Factory for Upgradable Tokens
 
 Section Overview: The speaker introduces a proxy factory as an alternative to the naive factory for creating upgradable ERC20 tokens.
 
@@ -114,7 +114,7 @@ Section Overview: The speaker introduces a proxy factory as an alternative to th
 - This allows for atomic deployment and initialization of contracts without redeploying the entire ERC20 logic.
 - The proxy deployment is less expensive than the naive factory but still more expensive than using a clone mechanism.
 
-# [t=0:15:58s] Clone Factory for Non-Upgradable Tokens
+# [15:58](https://youtu.be/3Mw-pMmJ7TA?t=958) Clone Factory for Non-Upgradable Tokens
 
 Section Overview: The speaker discusses the clone factory as an alternative to the proxy factory for creating non-upgradable ERC20 tokens.
 
@@ -124,7 +124,7 @@ Section Overview: The speaker discusses the clone factory as an alternative to t
 - It deploys a clone of the token implementation and separately calls the initialize function.
 - This approach is simpler and cheaper, as deploying a clone does not execute any code.
 
-# [t=0:17:00s] Gas Consumption Comparison
+# [17:00](https://youtu.be/3Mw-pMmJ7TA?t=1020) Gas Consumption Comparison
 
 Section Overview: The speaker compares the gas consumption of different token creation methods using a test scenario.
 
@@ -135,7 +135,7 @@ Section Overview: The speaker compares the gas consumption of different token cr
 - The naive implementation has the lowest deployment cost since it only includes the code of the RC20 tokens.
 - Both the clone and proxy implementations require additional code in their constructors, resulting in higher deployment costs.
 - Deploying the factory itself incurs its own deployment cost, which should be considered when evaluating overall gas consumption.
-# [t=1137s] Understanding the Cost of Using Proxies and Clones
+# [18:57](https://youtu.be/3Mw-pMmJ7TA?t=1137) Understanding the Cost of Using Proxies and Clones
 
 Section Overview: In this section, the speaker discusses the cost implications of using proxies and clones in smart contract development.
 
@@ -152,7 +152,7 @@ Section Overview: In this section, the speaker discusses the cost implications o
 - [21:03](https://youtu.be/3Mw-pMmJ7TA?t=1263) While deployment may be more expensive initially, usage becomes less expensive over time.
 - [21:42](https://youtu.be/3Mw-pMmJ7TA?t=1302) Clones are cheaper than proxies for both deployment and usage unless additional mechanisms like upgradeability are required.
 
-# [t=1323s] Choosing Between Proxy and Clone
+# [22:03](https://youtu.be/3Mw-pMmJ7TA?t=1323) Choosing Between Proxy and Clone
 
 Section Overview: This section explores factors to consider when deciding between using proxies or clones in smart contract development.
 
@@ -161,7 +161,7 @@ Section Overview: This section explores factors to consider when deciding betwee
 - [22:03](https://youtu.be/3Mw-pMmJ7TA?t=1323) If there is no need for upgradability or splitting calls between different implementations, clones are recommended over proxies.
 - [22:24](https://youtu.be/3Mw-pMmJ7TA?t=1344) Proxies have additional features that may be useful in certain cases but are not necessary if only delegating logic to a single endpoint.
 
-# [t=1363s] Direct Clone Implementation
+# [22:43](https://youtu.be/3Mw-pMmJ7TA?t=1363) Direct Clone Implementation
 
 Section Overview: This section discusses how UniSwap developers could have implemented direct cloning.
 
@@ -170,12 +170,12 @@ Section Overview: This section discusses how UniSwap developers could have imple
 - [22:43](https://youtu.be/3Mw-pMmJ7TA?t=1363) The UniSwap V2 Factory code includes a "createPair" function responsible for creating pairs.
 - [23:06](https://youtu.be/3Mw-pMmJ7TA?t=1386) Forking the code and making a few changes would allow for direct cloning using the "cloneDeterministic" function.
 
-# [t=1446s] Cost Comparison with Direct Clone Implementation
+# [24:06](https://youtu.be/3Mw-pMmJ7TA?t=1446) Cost Comparison with Direct Clone Implementation
 
 Section Overview: This section compares the deployment of a UniSwap pair using both the original implementation and a modified version that uses clones.
 
 - [24:06](https://youtu.be/3Mw-pMmJ7TA?t=1446) The modified version achieves the same functionality as the original UniSwap pair but at a lower cost due to using clones.
-# [t=1508s] Cost Comparison: Creating a Pair
+# [25:08](https://youtu.be/3Mw-pMmJ7TA?t=1508) Cost Comparison: Creating a Pair
 
 Section Overview: In this section, the speaker discusses the cost difference between creating a pair in different scenarios.
 
@@ -186,7 +186,7 @@ Section Overview: In this section, the speaker discusses the cost difference bet
 - Moving from the current uniform code to a clone version can save almost ninety percent of gas, reducing the cost to about two hundred thousand gas.
 - However, using a clone version may result in slightly higher expenses when calling the pair for swaps.
 
-# [t=1525s] Benefits of Using Clones
+# [25:25](https://youtu.be/3Mw-pMmJ7TA?t=1525) Benefits of Using Clones
 
 Section Overview: The speaker explains the advantages of using clones instead of uniform code.
 
@@ -196,7 +196,7 @@ Section Overview: The speaker explains the advantages of using clones instead of
 - For example, in UniSwap, deploying a wallet factory clone would be around 60,000 gas cheaper than their current implementation.
 - These savings can be significant for platforms like Argent and reduce costs for users and transactions.
 
-# [t=1569s] Similarities Between Code Versions
+# [26:09](https://youtu.be/3Mw-pMmJ7TA?t=1569) Similarities Between Code Versions
 
 Section Overview: The speaker compares code versions between Argent and their modified version.
 
@@ -206,7 +206,7 @@ Section Overview: The speaker compares code versions between Argent and their mo
 - Only minor modifications were made, such as changing contract names and adding control fracture functionality.
 - Both versions use clone deterministic for control fracture deployment but differ in how they predict addresses.
 
-# [t=1612s] Functionality Comparison: Proxy vs Clone
+# [26:52](https://youtu.be/3Mw-pMmJ7TA?t=1612) Functionality Comparison: Proxy vs Clone
 
 Section Overview: The speaker compares functionality between proxy and clone implementations.
 
@@ -216,7 +216,7 @@ Section Overview: The speaker compares functionality between proxy and clone imp
 - The main difference lies in how they create proxies or clones using salt syntax or predict deterministic address functions.
 - The modified version offers a simpler and more efficient way to predict clone addresses.
 
-# [t=1673s] Gas Cost Comparison: Wallet Factory
+# [27:53](https://youtu.be/3Mw-pMmJ7TA?t=1673) Gas Cost Comparison: Wallet Factory
 
 Section Overview: The speaker compares the gas cost of deploying a wallet factory in different scenarios.
 
@@ -226,7 +226,7 @@ Section Overview: The speaker compares the gas cost of deploying a wallet factor
 - By using a wallet factory clone, they could save approximately 60,000 gas per new user's wallet deployment.
 - These savings can be significant for platforms like Argent and reduce overall usage costs.
 
-# [t=1736s] Introduction to Clones Library
+# [28:56](https://youtu.be/3Mw-pMmJ7TA?t=1736) Introduction to Clones Library
 
 Section Overview: The speaker introduces the clones library and its functions.
 
@@ -237,7 +237,7 @@ Section Overview: The speaker introduces the clones library and its functions.
 - Another function called `clone deterministic` is used for control fracture mechanisms like UniSwap or Argent. It requires a unique salt value to avoid issues.
 - There is also a `predict deterministic address` function that allows predicting the address of a clone if another contract wants to deploy it.
 
-# [t=1796s] Summary and Benefits of Using Clones
+# [29:56](https://youtu.be/3Mw-pMmJ7TA?t=1796) Summary and Benefits of Using Clones
 
 Section Overview: The speaker summarizes the benefits of using clones and their cost-saving potential.
 
