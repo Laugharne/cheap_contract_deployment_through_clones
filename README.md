@@ -1,5 +1,13 @@
 # [**Cheap Contract Deployment Through Clones**](https://youtu.be/3Mw-pMmJ7TA)
 
+```
+This is a transcription of a YouTube video. Among the relevant resources for learning more about contract deployment and gas optimisation, I found this video particularly interesting.
+
+This content presents the opinions and perspectives of industry experts or other individuals.   The opinions expressed in this content do not necessarily reflect my opinion.
+
+Readers are encouraged to verify the information on their own and seek professional advice before making any decisions based on this content.
+```
+
 ![](thumbnail.jpg)
 
 ----
